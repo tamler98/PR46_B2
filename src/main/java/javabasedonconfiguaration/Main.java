@@ -1,13 +1,12 @@
-package xmlbasedconfiguration.main;
+package javabasedonconfiguaration;
 
-import javabasedonconfiguaration.BeanConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import pojo.AccountService;
 
 public class Main {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("annotationbasedconfiguration/beans.xml");
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
         AccountService accountService = applicationContext.getBean("accountService", AccountService.class);
 
         System.out.println("Before money  transfer");

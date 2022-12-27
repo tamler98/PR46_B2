@@ -1,4 +1,4 @@
-package pojobeans;
+package pojo;
 
 public interface AccountService {
     void transferMoney(long fromAccountId, long toAccountId, double amount);

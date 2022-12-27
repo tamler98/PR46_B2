@@ -1,8 +1,12 @@
-package pojo;
+package dependencyinjection;
 
-public class AccountServiceIml implements AccountService{
+import pojo.Account;
+import pojo.AccountRepository;
+import pojo.AccountService;
+
+public class AccountServiceConstructor implements AccountService {
     private AccountRepository accountRepository;
-    public void setAccountRepository(AccountRepository accountRepository) {
+    public void AccountServiceConstructor(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
     }
     @Override

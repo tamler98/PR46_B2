@@ -1,10 +1,14 @@
-package pojo;
+package annotationbasedconfiguration;
 
-public class AccountServiceIml implements AccountService{
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import pojo.Account;
+import pojo.AccountRepository;
+import pojo.AccountService;
+@Service("accountService")
+public class AccountService2Iml implements AccountService {
+    @Autowired
     private AccountRepository accountRepository;
-    public void setAccountRepository(AccountRepository accountRepository) {
-        this.accountRepository = accountRepository;
-    }
     @Override
     public void transferMoney(long fromAccountId, long toAccountId, double amount) {
         Account sourceAccount = accountRepository.find(fromAccountId); // sourceAccount =1;

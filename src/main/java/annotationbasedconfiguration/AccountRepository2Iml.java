@@ -1,12 +1,22 @@
-package pojo;
+package annotationbasedconfiguration;
 
+import org.springframework.stereotype.Repository;
+import pojo.Account;
+import pojo.AccountRepository;
+
+import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AccountRepositoryIml implements AccountRepository {
-    private Map<Long, Account> accountsMap = new HashMap<>();
 
+@Repository
+public class AccountRepository2Iml implements AccountRepository {
+    private Map<Long, Account> accountsMap;
+
+    @PostConstruct
+    public void initData()
     {
+        accountsMap = new HashMap<>();
         Account account1 = new Account();
         account1.setId(1L);
         account1.setOwnerName("John");

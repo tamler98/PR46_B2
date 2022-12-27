@@ -1,4 +1,4 @@
-package pojobeans;
+package pojo;
 
 public interface AccountRepository {
     void insert(Account account);

@@ -1,11 +1,9 @@
-package xmlbasedconfiguration.main;
+package dependencyinjection;
 
-import javabasedonconfiguaration.BeanConfiguration;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import pojo.AccountService;
 
-public class Main {
+public class MainTestComstructor {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("annotationbasedconfiguration/beans.xml");
         AccountService accountService = applicationContext.getBean("accountService", AccountService.class);

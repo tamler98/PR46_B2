@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id= "accountRepositoryxxx" class= "pojo.AccountRepositoryIml"/>
+    <bean id="accountService" class="pojo.AccountServiceIml" autowire="byType"/>
+    <bean id="accountService" class="dependencyinjection.AccountServiceSetterIml" autowire="byType"/>
+    <bean id = "accountService" class = "dependencyinjection.AccountServiceConstructor" autowire="byType">
+
+    <!--        <property name="accountRepository" ref="accountRepository"/>-->
+    </bean>
+</beans>
