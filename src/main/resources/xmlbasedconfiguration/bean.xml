@@ -7,7 +7,7 @@
     <bean id= "accountRepositoryxxx" class= "pojo.AccountRepositoryIml"/>
     <bean id="accountService" class="pojo.AccountServiceIml" autowire="byType"/>
     <bean id="accountService" class="dependencyinjection.AccountServiceSetterIml" autowire="byType"/>
-    <bean id = "accountService" class = "dependencyinjection.AccountServiceConstructor" autowire="byType">
+    <bean id="accountService" class="dependencyinjection.AccountServiceConstructor" autowire="byType">
 
     <!--        <property name="accountRepository" ref="accountRepository"/>-->
     </bean>
